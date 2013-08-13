@@ -9,4 +9,20 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-BeachStat2::Application.config.secret_key_base = '5be7d73e186ed81be3ea2a4005e361cba15bc7e988f3ca55395aae5b6a706ac9ff9743c454639f262d370bb5d436d6d2849037c265df637a37a9ca8f043b12fd'
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+BeachStat2::Application.config.secret_key_base = secure_token
+
