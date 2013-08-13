@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Players = ['Спаич', 'Прас', 'Баранов', 'Олег', 'Стёпа', 'Федоринин']
+
+Players.each {|p| Player.find_or_create_by_name(p)}
