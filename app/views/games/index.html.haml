@@ -1,1 +1,21 @@
 %h1 Результаты всех игр
+
+%table#games
+  %thead
+    %tr
+      %th День
+      %th №
+      %th Winner 1
+      %th Winner 2
+      %th Loser 1
+      %th Loser 2
+      %th W pts
+      %th L pts
+  %tbody
+-#    - @games.each do |game|
+-#      %tr
+-#        %td= movie.title 
+-#        %td= movie.rating
+-#        %td= movie.release_date
+-#        %td= movie.director
+-#        %td= link_to "More about #{movie.title}", movie_path(movie)
