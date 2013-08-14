@@ -7,6 +7,7 @@ gem 'rails', '4.0.0'
 group :development, :test do
   gem 'sqlite3', '1.3.7'
   gem 'rspec-rails', '2.13.1'
+  gem 'hirb-unicode'
 end
 
 group :test do
