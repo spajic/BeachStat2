@@ -8,6 +8,7 @@ group :development, :test do
   gem 'sqlite3', '1.3.7'
   gem 'rspec-rails', '2.13.1'
   gem 'hirb-unicode'
+  gem 'factory_girl_rails'
 end
 
 group :test do
