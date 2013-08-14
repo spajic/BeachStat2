@@ -11,11 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130814114928) do
+ActiveRecord::Schema.define(version: 20130814115919) do
 
   create_table "days", force: true do |t|
     t.date     "date"
     t.string   "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "games", force: true do |t|
+    t.integer  "day_id"
+    t.integer  "num_in_day"
+    t.integer  "win_points"
+    t.integer  "lose_points"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
