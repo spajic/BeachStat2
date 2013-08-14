@@ -9,6 +9,7 @@ group :development, :test do
   gem 'rspec-rails', '2.13.1'
   gem 'hirb-unicode'
   gem 'factory_girl_rails'
+  gem 'launchy'
 end
 
 group :test do
