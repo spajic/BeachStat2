@@ -12,10 +12,13 @@
       %th W pts
       %th L pts
   %tbody
--#    - @games.each do |game|
--#      %tr
--#        %td= movie.title 
--#        %td= movie.rating
--#        %td= movie.release_date
--#        %td= movie.director
--#        %td= link_to "More about #{movie.title}", movie_path(movie)
+    - @games.each do |game|
+      %tr
+        %td= game.day.date
+        %td= game.num_in_day
+        %td= game.results.where(win: true).first.player.name
+        %td= game.results.where(win: true).last.player.name
+        %td= game.results.where(win: false).first.player.name
+        %td= game.results.where(win: false).last.player.name
+        %td= game.win_points
+        %td= game.lose_points
