@@ -10,6 +10,10 @@ group :development, :test do
   gem 'hirb-unicode'
   gem 'factory_girl_rails'
   gem 'launchy'
+  gem 'guard-rspec'
+  gem 'spork-rails', github: 'sporkrb/spork-rails'
+  gem 'guard-spork'
+  gem 'childprocess'
 end
 
 group :test do
@@ -17,6 +21,7 @@ group :test do
   gem 'capybara', '2.1.0'
   gem 'cucumber-rails', '1.3.0', :require => false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
+  gem 'libnotify'
 end
 
 gem 'haml'
