@@ -10,8 +10,7 @@ describe Player do
     before  { @player = Player.new }
     subject { @player }
 
-    it { Player.should respond_to(:load_data_for_rating_calculation) }
-	it { should respond_to(:wins_count				) }
+    it { should respond_to(:wins_count				) }
 	it { should respond_to(:loses_count				) }
 	it { should respond_to(:games_count				) }
 	it { should respond_to(:wins_to_games_ratio		) }
@@ -20,11 +19,11 @@ describe Player do
 	it { should respond_to(:rating 					) }
 	it { should respond_to(:more_rating_man_count 	) }
 	it { should respond_to(:place 					) }
+	it { Player.should respond_to(:all_sorted_by_place		) }
   end
 
   describe 'it work correctly on fixtures data' do
   	before  { 
-  		Player.load_data_for_rating_calculation
   		@spajic = Player.first 
   		@pras   = Player.find(2)
   	}

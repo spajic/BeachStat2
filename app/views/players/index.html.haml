@@ -4,7 +4,24 @@
   %thead
     %tr
       %th Ф.И.О.
+      %th Win
+      %th Lose
+      %th Games
+      %th W/G
+      %th Больше побед
+      %th БПР
+      %th Рейтинг
+      %th Место
+
   %tbody
     - @players.each do |player|
       %tr
         %td= player.name
+        %td= player.wins_count
+        %td= player.loses_count
+        %td= player.games_count
+        %td= player.wins_to_games_ratio
+        %td= player.more_wins_man_count
+        %td= player.more_wins_man_ratio
+        %td= player.rating
+        %td= player.place

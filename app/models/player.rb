@@ -1,9 +1,6 @@
 class Player < ActiveRecord::Base
 	has_many :results
-
-	def Player.load_data_for_rating_calculation
-		@@players = Player.all.to_a
-	end
+	@@players = Player.all.to_a
 
 	def wins_count
 		results.where(win: true).count
@@ -31,5 +28,9 @@ class Player < ActiveRecord::Base
 	end
 	def place
 		1 + more_rating_man_count
+	end
+
+	def Player.all_sorted_by_place
+		@@players.sort{ |p1, p2| p1.place <=> p2.place }
 	end
 end
