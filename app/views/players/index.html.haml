@@ -1,0 +1,10 @@
+%h1 Статистика игроков
+
+%table#players
+  %thead
+    %tr
+      %th Ф.И.О.
+  %tbody
+    - @players.each do |player|
+      %tr
+        %td= player.name
