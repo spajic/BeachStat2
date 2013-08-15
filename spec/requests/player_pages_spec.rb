@@ -20,7 +20,7 @@ describe "Players Pages" do
       it { should have_content('Lose') }
       it { should have_content('Games') }
       it { should have_content('W/G') }
-      it { should have_content('Больше побед') }
+      it { should have_content('Больше побед') } 
       it { should have_content('БПР') }
       it { should have_content('Рейтинг') }
       it { should have_content('Место') }
