@@ -1,4 +1,5 @@
 BeachStat2::Application.routes.draw do
+  get "players/index"
   #get "games/index"
   resources :games
   # The priority is based upon order of creation: first created -> highest priority.

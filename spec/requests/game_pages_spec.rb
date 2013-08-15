@@ -11,7 +11,7 @@ describe "Game Pages" do
 
     before { 
     	visit games_path 
-    	save_and_open_page
+    	# Debug: save_and_open_page
     }
 
     it { should have_content('Результаты всех игр') }
