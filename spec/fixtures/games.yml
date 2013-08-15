@@ -4,3 +4,10 @@ game1:
   num_in_day: 1
   win_points: 15
   lose_points: 11
+
+game2:
+  id: 2
+  day_id: 1
+  num_in_day: 2
+  win_points: 15
+  lose_points: 10
