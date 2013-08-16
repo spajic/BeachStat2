@@ -454,3 +454,13 @@ d21.comment =
 games = [ ]
 games.each { |game| create_game_in_day_by_array(d21, game) }
 d21.save
+
+# День 22
+d22 = Day.create(id:22)
+d22.date = '26.07.2013'.to_date
+d22.comment =  
+	"Неявка. Нечипур на Байкале. Прас болеет. Все разъехались.
+	Хотя мы с Саней пришли с девчонками поиграли."
+games = [ ]
+games.each { |game| create_game_in_day_by_array(d22, game) }
+d22.save
