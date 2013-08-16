@@ -33,4 +33,47 @@ class Player < ActiveRecord::Base
 	def Player.all_sorted_by_place
 		@@players.sort{ |p1, p2| p1.place <=> p2.place }
 	end
+	def Player.calculate_statistics
+		players_count = Player.count
+		p_stats = {}		
+		# wins_count, loses_count, games_count, wins_to_games_ratio
+		Player.all.each { |p| 
+			p_stats[p.name] = {'wins_count' => p.wins_count, 'loses_count' => p.loses_count}
+		}
+		p_stats.each { |key, s|
+			s['games_count'] = s['wins_count'].to_i + s['loses_count'].to_i
+			s['wins_to_games_ratio'] = (100 * (s['wins_count'].to_f / s['games_count'])).round
+		}
+
+		# more_wins_man_count
+		s_sorted_by_wins = p_stats.values.sort{ |s1, s2| s1['place'] <=> s2['place'] }
+		more_wins_man = 0
+		s_sorted_by_wins[0]['more_wins_man_count'] = more_wins_man
+		for i in 1..(s_sorted_by_wins.size - 1)
+			more_wins_man = more_wins_man + 1 if 
+				s_sorted_by_wins[i]['wins_count'] < s_sorted_by_wins[i-1]['wins_count']
+			s_sorted_by_wins[i]['more_wins_man_count'] = more_wins_man
+		end
+
+		# more_wins_man_ratio, rating
+		p_stats.each { |key, s| 
+			s['more_wins_man_ratio'] = 
+				( 100 * (1 - s['more_wins_man_count'].to_f / players_count ) ).round
+			s['rating'] = (s['wins_to_games_ratio'] + s['more_wins_man_ratio']) / 2
+		}
+
+		# more_rating_man_count, place
+		s_sorted_by_rating = p_stats.values.sort{ |s1, s2| s2['rating'] <=> s1['rating'] }
+		more_rating_man = 0
+		s_sorted_by_rating[0]['more_rating_man_count'] = more_rating_man
+		for i in 1..(s_sorted_by_rating.size - 1)
+			more_rating_man = more_rating_man + 1 if 
+				s_sorted_by_rating[i]['rating'] < s_sorted_by_rating[i-1]['rating']
+			s_sorted_by_rating[i]['more_rating_man_count'] = more_rating_man
+		end
+		p_stats.each { |key, s| 
+			s['place'] = 1 + s['more_rating_man_count']
+		}
+		return p_stats
+	end
 end
