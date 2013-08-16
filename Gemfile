@@ -15,6 +15,7 @@ group :development, :test do
   gem 'guard-spork'
   gem 'childprocess'
   gem 'debugger'
+  gem 'rack-mini-profiler'
 end
 
 group :test do
