@@ -464,3 +464,13 @@ d22.comment =
 games = [ ]
 games.each { |game| create_game_in_day_by_array(d22, game) }
 d22.save
+
+# День 23
+d23 = Day.create(id:23)
+d23.date = '29.07.2013'.to_date
+d23.comment =  
+	"День, когда Стёпа планировал бабло и набиралось 4 человека с ним."
+games = [ ]
+games.each { |game| create_game_in_day_by_array(d23, game) }
+d23.save
+
