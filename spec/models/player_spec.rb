@@ -62,27 +62,27 @@ describe Player do
   		@stats  = Player.calculate_statistics
   	}
 
-  	it { @stats['Спаич']['wins_count'].should eq(@spajic.wins_count) }
-  	it { @stats['Спаич']['loses_count'].should eq(@spajic.loses_count) }
-  	it { @stats['Спаич']['games_count'].should eq(@spajic.games_count) }
+  	it { @stats[0][1]['wins_count'].should eq(@spajic.wins_count) }
+  	it { @stats[0][1]['loses_count'].should eq(@spajic.loses_count) }
+  	it { @stats[0][1]['games_count'].should eq(@spajic.games_count) }
 
-  	it { @stats['Спаич']['wins_to_games_ratio'].should eq(@spajic.wins_to_games_ratio) }
-  	it { @stats['Прас']['wins_to_games_ratio'].should eq(@pras.wins_to_games_ratio) }
+  	it { @stats[0][1]['wins_to_games_ratio'].should eq(@spajic.wins_to_games_ratio) }
+  	it { @stats[1][1]['wins_to_games_ratio'].should eq(@pras.wins_to_games_ratio) }
 
-	it { @stats['Спаич']['more_wins_man_count'].should eq(@spajic.more_wins_man_count) }
-	it { @stats['Прас']['more_wins_man_count'].should eq(@pras.more_wins_man_count) }
-	it { @stats['Баранов']['more_wins_man_count'].should eq(@baranov.more_wins_man_count) }
+	it { @stats[0][1]['more_wins_man_count'].should eq(@spajic.more_wins_man_count) }
+	it { @stats[1][1]['more_wins_man_count'].should eq(@pras.more_wins_man_count) }
+	it { @stats[2][1]['more_wins_man_count'].should eq(@baranov.more_wins_man_count) }
 
-	it { @stats['Спаич']['more_wins_man_ratio'].should eq(@spajic.more_wins_man_ratio) }
-	it { @stats['Прас']['more_wins_man_ratio'].should eq(@pras.more_wins_man_ratio) }
+	it { @stats[0][1]['more_wins_man_ratio'].should eq(@spajic.more_wins_man_ratio) }
+	it { @stats[1][1]['more_wins_man_ratio'].should eq(@pras.more_wins_man_ratio) }
 	
-	it { @stats['Спаич']['rating'].should eq(@spajic.rating) }
-	it { @stats['Прас']['rating'].should eq(@pras.rating) }
+	it { @stats[0][1]['rating'].should eq(@spajic.rating) }
+	it { @stats[1][1]['rating'].should eq(@pras.rating) }
 
-	it { @stats['Спаич']['more_rating_man_count'].should eq(@spajic.more_rating_man_count) }
-	it { @stats['Прас']['more_rating_man_count'].should eq(@pras.more_rating_man_count) }
+	it { @stats[0][1]['more_rating_man_count'].should eq(@spajic.more_rating_man_count) }
+	it { @stats[1][1]['more_rating_man_count'].should eq(@pras.more_rating_man_count) }
 
-	it { @stats['Спаич']['place'].should eq(@spajic.place) }
-	it { @stats['Прас']['place'].should eq(@pras.place) }
+	it { @stats[0][1]['place'].should eq(@spajic.place) }
+	it { @stats[1][1]['place'].should eq(@pras.place) }
   end
 end

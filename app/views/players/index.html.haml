@@ -14,14 +14,14 @@
       %th Место
 
   %tbody
-    - @players.each do |player|
+    - @players.each do |player, stat|
       %tr
-        %td= player.name
-        %td= player.wins_count
-        %td= player.loses_count
-        %td= player.games_count
-        %td= player.wins_to_games_ratio
-        %td= player.more_wins_man_count
-        %td= player.more_wins_man_ratio
-        %td= player.rating
-        %td= player.place
+        %td= player
+        %td= stat['wins_count']
+        %td= stat['loses_count']
+        %td= stat['games_count']
+        %td= stat['wins_to_games_ratio']
+        %td= stat['more_wins_man_count']
+        %td= stat['more_wins_man_ratio']
+        %td= stat['rating']
+        %td= stat['place']

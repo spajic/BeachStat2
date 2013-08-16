@@ -74,6 +74,7 @@ class Player < ActiveRecord::Base
 		p_stats.each { |key, s| 
 			s['place'] = 1 + s['more_rating_man_count']
 		}
-		return p_stats
+		p_stats_a = p_stats.to_a		
+		return p_stats_a.sort{|s1, s2| s1[1]['place'] <=> s2[1]['place']}
 	end
 end

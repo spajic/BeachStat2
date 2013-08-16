@@ -1,5 +1,5 @@
 class PlayersController < ApplicationController
   def index
-  	@players = Player.all_sorted_by_place
+  	@players = Player.calculate_statistics
   end
 end
