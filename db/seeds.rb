@@ -424,4 +424,14 @@ games = [
 games.each { |game| create_game_in_day_by_array(d18, game) }
 d18.save
 
+# День 19
+d19 = Day.create(id:19)
+d19.date = '15.07.2013'.to_date
+d19.comment =  
+	"Основных игроков не набралось - пригласили Лёху - друга Петруччо и Свету Замотаеву.
+	В виду неформальности и микстовости результатов вообще не записывали."
+games = [ ]
+games.each { |game| create_game_in_day_by_array(d19, game) }
+d19.save
+
 
