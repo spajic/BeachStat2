@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130814122923) do
+ActiveRecord::Schema.define(version: 20130816121508) do
 
   create_table "days", force: true do |t|
     t.date     "date"
-    t.string   "comment"
+    t.text     "comment",    limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
