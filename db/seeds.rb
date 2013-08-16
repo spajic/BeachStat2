@@ -434,4 +434,23 @@ games = [ ]
 games.each { |game| create_game_in_day_by_array(d19, game) }
 d19.save
 
+# День 20
+d20 = Day.create(id:20)
+d20.date = '19.07.2013'.to_date
+d20.comment =  
+	"День перед болт-пати 2.
+	Был сильный ливень, прекратившийся, как обычно, перед нашей игрой.
+	И день оказался одним из самых солнечных.
+	На этом фоне забыл записать резульаты, так что, наверное, они безнаёжно потеряны."
+games = [ ]
+games.each { |game| create_game_in_day_by_array(d20, game) }
+d20.save
 
+# День 21
+d21 = Day.create(id:21)
+d21.date = '22.07.2013'.to_date
+d21.comment =  
+	"Неявка. Хотя устроили обсуждение этой темы с применением рваных ежей и жёваных кротов."
+games = [ ]
+games.each { |game| create_game_in_day_by_array(d21, game) }
+d21.save
