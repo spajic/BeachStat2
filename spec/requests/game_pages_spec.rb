@@ -18,7 +18,6 @@ describe "Game Pages" do
 
     describe 'should show table column names' do
 		it { 
-			should have_content('День')  
 			should have_content('№')
 			should have_content('Winner 1')
 			should have_content('Winner 2')
