@@ -46,7 +46,7 @@ class Player < ActiveRecord::Base
 		}
 
 		# more_wins_man_count
-		s_sorted_by_wins = p_stats.values.sort{ |s1, s2| s1['place'] <=> s2['place'] }
+		s_sorted_by_wins = p_stats.values.sort{ |s1, s2| s2['wins_count'] <=> s1['wins_count'] }
 		more_wins_man = 0
 		s_sorted_by_wins[0]['more_wins_man_count'] = more_wins_man
 		for i in 1..(s_sorted_by_wins.size - 1)

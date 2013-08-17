@@ -40,7 +40,7 @@ describe Player do
 
  	it { @spajic.more_wins_man_count.should eq(0) }
 	it { @pras  .more_wins_man_count.should eq(1) }
-
+ 
 	it { @spajic.more_wins_man_ratio.should eq(100) }
 	it { @pras.more_wins_man_ratio.should   eq(75) }
 
