@@ -16,9 +16,9 @@
       %tr
         %td= game.day.date
         %td= game.num_in_day
-        %td= game.results.where(win: true).first.player.name
-        %td= game.results.where(win: true).last.player.name
-        %td= game.results.where(win: false).first.player.name
-        %td= game.results.where(win: false).last.player.name
+        %td= first_winner(game.results).player.name
+        %td= second_winner(game.results).player.name
+        %td= first_loser(game.results).player.name
+        %td= second_loser(game.results).player.name
         %td= game.win_points
         %td= game.lose_points
