@@ -1,6 +1,6 @@
 %h1 Результаты всех игр
 
-%table#games
+%table#games{width: 600}
   %thead
     %tr
       %th №
@@ -13,7 +13,9 @@
   %tbody
     - @days.each do |day|
       %tr
-        %td{colspan: 8}= day.date.strftime("%-d %B, %A")
+        %td{colspan: 8, align: 'center'}= day.date.strftime("%-d %B, %A")      
+      %tr
+        %td{colspan: 8, align: 'center'}= day.comment
       - day.games.each do |game|
         %tr
           %td= game.num_in_day
