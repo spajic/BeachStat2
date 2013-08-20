@@ -7,7 +7,7 @@ class GamesController < ApplicationController
   	# helper для получения first_winner => 676 sql
   	# helper's для получения всех игроков => 5 sql
   	# Время загрузки сократилось с 12 секунд до 1 секунды
-  	@days = Day.includes(games: [results: [:player]]).all
+  	@days = Day.order("date DESC").includes(games: [results: [:player]]).load
   	# Game.includes(:day, results: [:player]).all
   end
 end

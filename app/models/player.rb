@@ -50,9 +50,14 @@ class Player < ActiveRecord::Base
 		more_wins_man = 0
 		s_sorted_by_wins[0]['more_wins_man_count'] = more_wins_man
 		for i in 1..(s_sorted_by_wins.size - 1)
-			more_wins_man = more_wins_man + 1 if 
-				s_sorted_by_wins[i]['wins_count'] < s_sorted_by_wins[i-1]['wins_count']
-			s_sorted_by_wins[i]['more_wins_man_count'] = more_wins_man
+			more_wins_man = more_wins_man + 1  
+			if s_sorted_by_wins[i]['wins_count'] == s_sorted_by_wins[i-1]['wins_count']
+				then 
+					s_sorted_by_wins[i]['more_wins_man_count'] = 
+						s_sorted_by_wins[i-1]['more_wins_man_count']
+				else
+					s_sorted_by_wins[i]['more_wins_man_count'] = more_wins_man		
+			end
 		end
 
 		# more_wins_man_ratio, rating
