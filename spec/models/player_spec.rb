@@ -33,19 +33,19 @@ describe Player do
 
   	it { @spajic.wins_count.should eq(2) }
   	it { @spajic.loses_count.should eq(0) }
-  	it { @spajic.games_count.should eq(2) }
+  	it { @spajic.games_count.should eq(2) } 
 
-  	it { @spajic.wins_to_games_ratio.should eq(100) }
+  it { @spajic.wins_to_games_ratio.should eq(100) }
  	it { @pras  .wins_to_games_ratio.should eq(50) }
 
  	it { @spajic.more_wins_man_count.should eq(0) }
 	it { @pras  .more_wins_man_count.should eq(1) }
  
 	it { @spajic.more_wins_man_ratio.should eq(100) }
-	it { @pras.more_wins_man_ratio.should   eq(75) }
+	it { @pras.more_wins_man_ratio.should   eq(67) }
 
 	it { @spajic.rating.should eq(100) }
-	it { @pras.rating.should eq(62) }
+	it { @pras.rating.should eq(58) }
 
 	it { @spajic.more_rating_man_count.should eq(0) }
 	it { @pras  .more_rating_man_count.should eq(1) }

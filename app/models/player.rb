@@ -18,7 +18,7 @@ class Player < ActiveRecord::Base
 		@@players.count {|p| p.wins_count > wins_count}
 	end
 	def more_wins_man_ratio
-		( 100 * (1 - more_wins_man_count.to_f / Player.count ) ).round
+		( 100 * (1 - more_wins_man_count.to_f / (Player.count-1) ) ).round
 	end
 	def rating
 		(wins_to_games_ratio + more_wins_man_ratio) / 2
@@ -58,7 +58,7 @@ class Player < ActiveRecord::Base
 		# more_wins_man_ratio, rating
 		p_stats.each { |key, s| 
 			s['more_wins_man_ratio'] = 
-				( 100 * (1 - s['more_wins_man_count'].to_f / players_count ) ).round
+				( 100 * (1 - s['more_wins_man_count'].to_f / (players_count-1) ) ).round
 			s['rating'] = (s['wins_to_games_ratio'] + s['more_wins_man_ratio']) / 2
 		}
 
