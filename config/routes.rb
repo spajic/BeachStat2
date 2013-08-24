@@ -1,5 +1,6 @@
 BeachStat2::Application.routes.draw do
   get "main/main"
+  get "reports/legioners"
   #get "games/index"
   resources :games
   resources :players

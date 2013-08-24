@@ -1,0 +1,18 @@
+%h1 Отчёт по легионерам
+= link_to 'На главную', '/main/main'
+
+%table#legioners
+  %thead
+    %tr
+      %th Ф.И.О.
+      %th Дни
+      %th Взнос
+
+  %tbody
+    - @legioners.each do |legioner|
+      %tr
+        %td= legioner.name
+        %td= legioner.days_count
+        %td= "#{legioner.days_count * 200} р."
+
+%h3= "Total JackPot: #{Player.jackpot}р."

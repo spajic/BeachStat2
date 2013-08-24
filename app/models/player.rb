@@ -2,6 +2,12 @@ class Player < ActiveRecord::Base
 	has_many :results
 	@@players = Player.all.to_a
 
+	def Player.legioners
+		Player.where(is_legioner: true)
+	end
+	def Player.jackpot
+		Player.legioners.collect{|player| player.days_count}.reduce(:+)*200
+	end
 	def days_count
 		results.joins(game: :day).select(:date).distinct.count
 	end

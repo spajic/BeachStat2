@@ -19,27 +19,31 @@ def create_game_in_day_by_array(day, game)
 end
 
 Players = [
-	'Спаич', 
-	'Прас', 
-	'Баранов', 
-	'Олег', 
-	'Стёпа', 
-	'Федоринин', 
-	'Королёв',
-	'Тёма',
-	'Амбал',
-	'Гоша',
-	'Нечипур',
-	'Тимофей',
-	'Саня',
-	'Алёхин',
-	'Казаков',
-	'Браток',
-	'Битёк',
-	'Щукин',
-	'Балу'
+	['Спаич'	, false	],
+	['Прас'		, false	],
+	['Баранов'	, true	],
+	['Олег'		, false	],
+	['Стёпа'	, false	],
+	['Федоринин', true	],
+	['Королёв'	, true  ],	
+	['Тёма'		, false	],
+	['Амбал'	, true	],
+	['Гоша'		, true	],
+	['Нечипур'	, false	],	
+	['Тимофей'	, true	],
+	['Саня'		, false	],	
+	['Алёхин'	, true	],
+	['Казаков'	, false ],		
+	['Браток'	, true	],
+	['Битёк'	, true	],
+	['Щукин'	, true	],
+	['Балу'		, true	]
 ]
-Players.each {|p| Player.find_or_create_by_name(p)}
+Players.each do |p| 
+	player = Player.find_or_create_by_name(p[0])
+	player.is_legioner = p[1]
+	player.save
+end
 
 Day.delete_all
 Game.delete_all

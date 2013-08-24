@@ -10,6 +10,8 @@ describe Player do
     before  { @player = Player.new }
     subject { @player }
 
+  it { Player.should respond_to(:legioners         ) } 
+  it { Player.should respond_to(:jackpot    ) }
   it { should respond_to(:is_legioner       ) } 
   it { should respond_to(:wins_count				) }
 	it { should respond_to(:loses_count				) }
@@ -29,6 +31,9 @@ describe Player do
   		@spajic = Player.first 
   		@pras   = Player.find(2)
   	}
+
+    it { Player.legioners.should match_array([@pras]) } 
+    it { Player.jackpot.should eq(200) }
   	it { @spajic.name.should eq('Спаич') }
   	it { @pras  .name.should eq('Прас' ) }
 
