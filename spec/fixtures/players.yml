@@ -1,15 +1,19 @@
 spajic:
   id: 1
+  is_legioner: false
   name: Спаич
 
 pras:
   id: 2
+  is_legioner: true
   name: Прас
 
 baranov: 
   id: 3
+  is_legioner: false
   name: Баранов
 
 oleg:
   id: 4
+  is_legioner: false
   name: Олег

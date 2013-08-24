@@ -10,7 +10,8 @@ describe Player do
     before  { @player = Player.new }
     subject { @player }
 
-    it { should respond_to(:wins_count				) }
+  it { should respond_to(:is_legioner       ) } 
+  it { should respond_to(:wins_count				) }
 	it { should respond_to(:loses_count				) }
 	it { should respond_to(:games_count				) }
 	it { should respond_to(:wins_to_games_ratio		) }
@@ -30,6 +31,9 @@ describe Player do
   	}
   	it { @spajic.name.should eq('Спаич') }
   	it { @pras  .name.should eq('Прас' ) }
+
+    it { @spajic.is_legioner.should eq(false) }
+    it { @pras  .is_legioner.should eq(true) }
 
     it { @spajic.days_count.should eq(1) }
 

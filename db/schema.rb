@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130816121508) do
+ActiveRecord::Schema.define(version: 20130824085557) do
 
   create_table "days", force: true do |t|
     t.date     "date"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20130816121508) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "is_legioner"
   end
 
   create_table "results", force: true do |t|
