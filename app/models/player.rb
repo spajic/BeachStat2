@@ -2,6 +2,9 @@ class Player < ActiveRecord::Base
 	has_many :results
 	@@players = Player.all.to_a
 
+	def days_count
+		results.joins(game: :day).select(:date).distinct.count
+	end
 	def wins_count
 		results.where(win: true).count
 	end
@@ -38,7 +41,7 @@ class Player < ActiveRecord::Base
 		p_stats = {}		
 		# wins_count, loses_count, games_count, wins_to_games_ratio
 		Player.all.each { |p| 
-			p_stats[p.name] = {'wins_count' => p.wins_count, 'loses_count' => p.loses_count}
+			p_stats[p.name] = {'player'=>p, 'wins_count' => p.wins_count, 'loses_count' => p.loses_count}
 		}
 		p_stats.each { |key, s|
 			s['games_count'] = s['wins_count'].to_i + s['loses_count'].to_i

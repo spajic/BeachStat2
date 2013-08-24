@@ -5,6 +5,7 @@
   %thead
     %tr
       %th Ф.И.О.
+      %th Days
       %th Win
       %th Lose
       %th Games
@@ -18,6 +19,7 @@
     - @players.each do |player, stat|
       %tr
         %td= player
+        %td= stat['player'].days_count
         %td= stat['wins_count']
         %td= stat['loses_count']
         %td= stat['games_count']

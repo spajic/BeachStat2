@@ -16,6 +16,7 @@ describe "Players Pages" do
 
     describe 'should show table column names' do
 		  it { should have_content('Ф.И.О.'       ) }
+      it { should have_content('Days'         ) } 
     	it { should have_content('Win'          ) }
       it { should have_content('Lose'         ) } 
       it { should have_content('Games'        ) }

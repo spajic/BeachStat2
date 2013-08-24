@@ -31,6 +31,8 @@ describe Player do
   	it { @spajic.name.should eq('Спаич') }
   	it { @pras  .name.should eq('Прас' ) }
 
+    it { @spajic.days_count.should eq(1) }
+
   	it { @spajic.wins_count.should eq(2) }
   	it { @spajic.loses_count.should eq(0) }
   	it { @spajic.games_count.should eq(2) } 
@@ -52,6 +54,7 @@ describe Player do
 
 	it { @spajic.place.should eq(1) }
 	it { @pras  .place.should eq(2) }
+
   end
 
   describe '#calculate_statistics' do
@@ -62,6 +65,7 @@ describe Player do
   		@stats  = Player.calculate_statistics
   	}
 
+    it { @stats[0][1]['player'].should eq(@spajic) }
   	it { @stats[0][1]['wins_count'].should eq(@spajic.wins_count) }
   	it { @stats[0][1]['loses_count'].should eq(@spajic.loses_count) }
   	it { @stats[0][1]['games_count'].should eq(@spajic.games_count) }
