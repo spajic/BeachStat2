@@ -3,7 +3,7 @@ class Player < ActiveRecord::Base
 	@@players = Player.all.to_a
 
 	def Player.legioners
-		Player.where(is_legioner: true)
+		Player.where(is_legioner: true).sort!{|p1,p2| p2.days_count <=> p1.days_count}	
 	end
 	def Player.jackpot
 		Player.legioners.collect{|player| player.days_count}.reduce(:+)*200
