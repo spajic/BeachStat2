@@ -18,28 +18,26 @@ def create_game_in_day_by_array(day, game)
 	g.results.create(player: Player.find_by_name(game[4]), win: false)
 end
 
+# второй столбец - Легионер или нет
+Player.delete_all
+Day.delete_all
+Game.delete_all
+Result.delete_all
+
 Players = [
-	['Спаич'	, false	],
 	['Прас'		, false	],
-	['Олег'		, false	],
-	['Стёпа'	, false	],
-	['Королёв'	, true  ],	
 	['Тёма'		, false	],
-	['Амбал'	, true	],
 	['Саня'		, false	],	
-	['Алёхин'	, true	],
 	['Казаков'	, false ],		
-	['Браток'	, true	]
+	['Спаич'	, false	],
+	['Игорь'	, false	],
+	['Стёпа'	, false	]
 ]
 Players.each do |p| 
 	player = Player.find_or_create_by_name(p[0])
 	player.is_legioner = p[1]
 	player.save
 end
-
-Day.delete_all
-Game.delete_all
-Result.delete_all
 
 # День 1 (id = 1)
 d1 = Day.create(id:1)
