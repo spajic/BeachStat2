@@ -108,16 +108,13 @@ class Player < ActiveRecord::Base
 			end
 		}
 
-		more_rating_man = 0
-		s_sorted_by_rating[0]['more_rating_man_count'] = more_rating_man
-		for i in 1..(s_sorted_by_rating.size - 1)
-			more_rating_man = more_rating_man + 1 
-			s_sorted_by_rating[i]['more_rating_man_count'] = more_rating_man
+		for i in 0..(s_sorted_by_rating.size - 1)
+			s_sorted_by_rating[i]['more_rating_man_count'] = i
 		end
 		p_stats.each { |key, s| 
 			s['place'] = 1 + s['more_rating_man_count']
 		}
-		p_stats_a = p_stats.to_a		
+		p_stats_a = p_stats.to_a	
 		return p_stats_a.sort{|s1, s2| s1[1]['place'] <=> s2[1]['place']}
 	end
 end
