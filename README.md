@@ -47,6 +47,9 @@
 - Cucumber - инструмент для написания user stories на DSL и их использования как Acceptance tests и Integration tests
 - Capybara - инструмент для автоматических выполнений действий в браузере (нажимать кнопки, ходить по ссылкам и пр)
 
+- Тесты Cucumber хранятся в папке Features. У меня в этом проекте сейчас таких тестов нет.
+- Для запуска тестов используется команда cucumber.
+
 ## TDD (Test Driven Design)
 В SaaS учили, что инструемнт для TDD - RSpec (DSL for testing).
 Ещё есть классные инструменты guard, spork.
