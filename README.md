@@ -61,6 +61,7 @@
   - по guard и guard-rspec есть rails-cast: http://railscasts.com/episodes/264-guard
   - по rspec есть rails-cast
   - по guard minitest есть информация в rails tutorial
+  - Если guard не замечает каких-то изменений, надо доработать Guardfile, где сопоставлены изменения в файлах и соответствующие действия
 - spork используется guard для запуска тестов в отдельных окружениях
 - growl - всплывающие уведомления для Ubuntu, через которые guard выводит результаты выполнения тестов
 
