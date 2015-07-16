@@ -26,11 +26,58 @@ describe Player do
 	it { Player.should respond_to(:calculate_statistics		) }
   end
 
+  # Сводку по данным fixtures можно посмотреть в файле
+  # calculate_statisitcs_on_fixture_data.txt
   describe 'it work correctly on fixtures data' do
   	before  { 
   		@spajic = Player.first 
   		@pras   = Player.find(2)
-  	}
+      @spajic_s = {
+        "wins_count"=>2, 
+        "loses_count"=>0,
+        "games_count"=>2, 
+        "wins_to_games_ratio"=>100, 
+        "more_wins_man_count"=>0, 
+        "more_wins_man_ratio"=>100,
+        "rating"=>100, 
+        "more_rating_man_count"=>0, 
+        "place"=>1
+      }
+      @pras_s = {
+        "wins_count"=>1, 
+        "loses_count"=>1, 
+        "games_count"=>2, 
+        "wins_to_games_ratio"=>50, 
+        "more_wins_man_count"=>1, 
+        "more_wins_man_ratio"=>67, 
+        "rating"=>58, 
+        "more_rating_man_count"=>1, 
+        "place"=>2
+      }
+      @baranov_s = {
+        "wins_count"=>1, 
+        "loses_count"=>1, 
+        "games_count"=>2, 
+        "wins_to_games_ratio"=>50, 
+        "more_wins_man_count"=>1, 
+        "more_wins_man_ratio"=>67, 
+        "rating"=>58, 
+        "more_rating_man_count"=>2, 
+        "place"=>3
+      }
+      @oleg_s = {
+        "wins_count"=>0, 
+        "loses_count"=>2, 
+        "games_count"=>2, 
+        "wins_to_games_ratio"=>0, 
+        "more_wins_man_count"=>3, 
+        "more_wins_man_ratio"=>0, 
+        "rating"=>0, 
+        "more_rating_man_count"=>3, 
+        "place"=>4
+      }
+    }
+      	
 
     it { Player.legioners.should match_array([@pras]) } 
     it { Player.jackpot.should eq(200) }
@@ -97,5 +144,6 @@ describe Player do
 
 	it { @stats[0][1]['place'].should eq(@spajic.place) }
 	it { @stats[1][1]['place'].should eq(@pras.place) }
+
   end
 end

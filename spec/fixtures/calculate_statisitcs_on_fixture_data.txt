@@ -1,0 +1,79 @@
+# Выписываю сюда результаты расчёта статистики для данных из fixtures
+# На них можно ориентироваться при тестировании
+Игры: 
+[1, 'Спаич', 'Прас', 'Олег', 'Баранов', 15, 11],
+[2, 'Спаич', 'Баранов', 'Олег', 'Прас', 15, 10]
+[
+	["Спаич",
+	{"player"=>
+		#<
+			Player id: 1, 
+			name: "Спаич", 
+			created_at: "2015-07-16 14:24:55", 
+			updated_at: "2015-07-16 14:24:55", 
+			is_legioner: false>, 
+		"wins_count"=>2, 
+		"loses_count"=>0,
+		"games_count"=>2, 
+		"wins_to_games_ratio"=>100, 
+		"more_wins_man_count"=>0, 
+		"more_wins_man_ratio"=>100,
+		"rating"=>100, 
+		"more_rating_man_count"=>0, 
+		"place"=>1
+	}
+	], 
+	["Прас", 
+	{"player"=>
+		#<
+			Player id: 2, 
+			name: "Прас", 
+			created_at: "2015-07-16 14:24:55", 
+			updated_at: "2015-07-16 14:24:55", 
+			is_legioner: true>, 
+		"wins_count"=>1, 
+		"loses_count"=>1, 
+		"games_count"=>2, 
+		"wins_to_games_ratio"=>50, 
+		"more_wins_man_count"=>1, 
+		"more_wins_man_ratio"=>67, 
+		"rating"=>58, 
+		"more_rating_man_count"=>1, 
+		"place"=>2}
+	], 
+	["Баранов", 
+	{"player"=>
+		#<Player 
+			id: 3, 
+			name: "Баранов", 
+			created_at: "2015-07-16 14:24:55", 
+			updated_at: "2015-07-16 14:24:55", 
+			is_legioner: false>, 
+		"wins_count"=>1, 
+		"loses_count"=>1, 
+		"games_count"=>2, 
+		"wins_to_games_ratio"=>50, 
+		"more_wins_man_count"=>1, 
+		"more_wins_man_ratio"=>67, 
+		"rating"=>58, 
+		"more_rating_man_count"=>2, 
+		"place"=>3}
+	], 
+	["Олег", 
+	{"player"=>
+		#<Player 
+			id: 4, 
+			name: "Олег", 
+			created_at: "2015-07-16 14:24:55", 
+			updated_at: "2015-07-16 14:24:55", 
+			is_legioner: false>, 
+		"wins_count"=>0, 
+		"loses_count"=>2, 
+		"games_count"=>2, 
+		"wins_to_games_ratio"=>0, 
+		"more_wins_man_count"=>3, 
+		"more_wins_man_ratio"=>0, 
+		"rating"=>0, 
+		"more_rating_man_count"=>3, 
+		"place"=>4}]
+]
