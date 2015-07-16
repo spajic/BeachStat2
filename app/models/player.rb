@@ -77,23 +77,24 @@ class Player < ActiveRecord::Base
 		}
 
 		# more_rating_man_count, place
-		s_sorted_by_rating = p_stats.values.sort{ |s1, s2| s2['rating'] <=> s1['rating'] }
 		# дополнительно обеспечиваем: при равном рейтинге преимущество по кол-ву игр
-		permutation_made = false
-		first_iteration = true
-		while permutation_made == true or first_iteration == true
-			first_iteration = false
-			for i in 0..(s_sorted_by_rating.size - 2)
-				if(s_sorted_by_rating[i]['rating'] == s_sorted_by_rating[i+1]['rating'] )
-					if(s_sorted_by_rating[i]['games_count'] < s_sorted_by_rating[i+1]['games_count'])
-						permutation_made = true
-						temp = s_sorted_by_rating[i]
-						s_sorted_by_rating[i] = s_sorted_by_rating[i + 1]
-						s_sorted_by_rating[i + 1] = temp
-					end
+		# The block must implement a comparison between a and b, and 
+		# return -1, when a follows b, 0 when a and b are equivalent, or +1 if b follows a.
+		s_sorted_by_rating = p_stats.values.sort{ |b, a| 
+			if a['rating'] > b['rating']  
+				1
+			elsif a['rating'] < b['rating']
+				-1
+			elsif a['rating'] == b['rating']
+				if a['games_count'] > b['games_count']
+					1
+				elsif a['games_count'] < b['games_count']
+					-1
+				else
+					0					
 				end
 			end
-		end
+		}
 
 		more_rating_man = 0
 		s_sorted_by_rating[0]['more_rating_man_count'] = more_rating_man
