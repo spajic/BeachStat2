@@ -2,7 +2,7 @@ class Player < ActiveRecord::Base
 	has_many :results
 	has_many :games, through: :results
 	has_many :days, through: :games
-	@@players = Player.includes(:results).all.to_a
+	@@players = Player.includes(:results, :games, :days).all.to_a
 
 	def Player.legioners
 		Player.where(is_legioner: true).sort!{|p1,p2| p2.days_count <=> p1.days_count}	
