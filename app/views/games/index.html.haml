@@ -15,6 +15,10 @@
     %tbody
       - @days.each do |day|
         %tr
+          %td &nbsp
+        %tr
+          %td &nbsp
+        %tr
           %td{colspan: 8, align: 'center'}= day.date.strftime("%-d %B, %A")      
         %tr
           %td{colspan: 8, align: 'center'}= day.comment
