@@ -23,8 +23,7 @@ describe Player do
 	it { should respond_to(:more_rating_man_count 	) }
 	it { should respond_to(:place 					) }
 	it { Player.should respond_to(:all_sorted_by_place		) }
-	it { Player.should respond_to(:calculate_statistics		) }
-  end
+	end
 
   # Сводку по данным fixtures можно посмотреть в файле
   # calculate_statisitcs_on_fixture_data.txt
@@ -113,37 +112,4 @@ describe Player do
 
   end
 
-  describe '#calculate_statistics' do
-  	before {
-  		@spajic = Player.first
-  		@pras   = Player.find(2)
-  		@baranov= Player.find(3)
-  		@stats  = Player.calculate_statistics
-  	}
-
-    it { @stats[0][1]['player'].should eq(@spajic) }
-  	it { @stats[0][1]['wins_count'].should eq(@spajic.wins_count) }
-  	it { @stats[0][1]['loses_count'].should eq(@spajic.loses_count) }
-  	it { @stats[0][1]['games_count'].should eq(@spajic.games_count) }
-
-  	it { @stats[0][1]['wins_to_games_ratio'].should eq(@spajic.wins_to_games_ratio) }
-  	it { @stats[1][1]['wins_to_games_ratio'].should eq(@pras.wins_to_games_ratio) }
-
-	it { @stats[0][1]['more_wins_man_count'].should eq(@spajic.more_wins_man_count) }
-	it { @stats[1][1]['more_wins_man_count'].should eq(@pras.more_wins_man_count) }
-	it { @stats[2][1]['more_wins_man_count'].should eq(@baranov.more_wins_man_count) }
-
-	it { @stats[0][1]['more_wins_man_ratio'].should eq(@spajic.more_wins_man_ratio) }
-	it { @stats[1][1]['more_wins_man_ratio'].should eq(@pras.more_wins_man_ratio) }
-	
-	it { @stats[0][1]['rating'].should eq(@spajic.rating) }
-	it { @stats[1][1]['rating'].should eq(@pras.rating) }
-
-	it { @stats[0][1]['more_rating_man_count'].should eq(@spajic.more_rating_man_count) }
-	it { @stats[1][1]['more_rating_man_count'].should eq(@pras.more_rating_man_count) }
-
-	it { @stats[0][1]['place'].should eq(@spajic.place) }
-	it { @stats[1][1]['place'].should eq(@pras.place) }
-
-  end
 end
