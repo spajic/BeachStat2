@@ -1,18 +1,18 @@
 %h1 Рейтинг игроков
 
-%table#players{:class => "table table-condensed table-hover"}
+%table#players{"data-toggle" => "table", "data-classes" => "table table-condensed table-hover table-no-bordered", "data-striped" => "true" }
   %thead
     %tr
-      %th Ф.И.О.
-      %th Days
-      %th Win
-      %th Lose
-      %th Games
-      %th W/G
-      %th Больше побед
-      %th БПР
-      %th Рейтинг
-      %th Место
+      %th{"data-sortable" => "true"} Ф.И.О.
+      %th{"data-sortable" => "true"} Days
+      %th{"data-sortable" => "true"} Win
+      %th{"data-sortable" => "true"} Lose
+      %th{"data-sortable" => "true"} Games
+      %th{"data-sortable" => "true"} W/G
+      %th{"data-sortable" => "true"} Больше побед
+      %th{"data-sortable" => "true"} БПР
+      %th{"data-sortable" => "true"} Рейтинг
+      %th{"data-sortable" => "true"} Место
 
   %tbody
     - @players.each do |player|

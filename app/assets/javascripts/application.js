@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
+//= require bootstrap-table
+//= require bootstrap-table-ru-RU.min
 //= require_tree .
