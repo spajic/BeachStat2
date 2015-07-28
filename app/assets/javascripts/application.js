@@ -16,4 +16,5 @@
 //= require twitter/bootstrap
 //= require bootstrap-table
 //= require bootstrap-table-ru-RU.min
+//= require highcharts
 //= require_tree .
