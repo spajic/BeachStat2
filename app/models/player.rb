@@ -24,7 +24,7 @@ class Player < ActiveRecord::Base
 		@results_count ||= results.count
 	end
 	def wins_to_games_ratio
-		@wins_to_games_ratio ||= (100 * (wins_count.to_f / games_count)).round
+		@wins_to_games_ratio ||= (100 * (wins_count / games_count.to_f)).round
 	end
 	def more_wins_man_count
 		@more_wins_man_count ||= @@players.count {|p| p.wins_count > wins_count}
