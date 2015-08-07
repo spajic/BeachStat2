@@ -14,7 +14,7 @@ describe "Game Pages" do
     	# Debug: save_and_open_page
     }
 
-    it { should have_content('Результаты всех игр') }
+    it { should have_content('Результаты игровых дней') }
 
     describe 'should show table column names' do
 		it { 

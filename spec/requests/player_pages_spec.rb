@@ -12,19 +12,19 @@ describe "Players Pages" do
     	# Debug: save_and_open_page
     }
 
-    it { should have_content('Статистика игроков') }
+    it { should have_content('Рейтинг игроков') }
 
     describe 'should show table column names' do
-		  it { should have_content('Ф.И.О.'       ) }
-      it { should have_content('Days'         ) } 
-    	it { should have_content('Win'          ) }
-      it { should have_content('Lose'         ) } 
-      it { should have_content('Games'        ) }
-      it { should have_content('W/G'          ) }
-      it { should have_content('Больше побед' ) } 
-      it { should have_content('БПР'          ) }
-      it { should have_content('Рейтинг'      ) } 
-      it { should have_content('Место'        ) }
+		  it { should have_content('ФИО' ) }
+      it { should have_content('D'   ) } 
+    	it { should have_content('W'   ) }
+      it { should have_content('L'   ) } 
+      it { should have_content('G'   ) }
+      it { should have_content('W/G' ) }
+      it { should have_content('БП'  ) } 
+      it { should have_content('БПР' ) }
+      it { should have_content('Р-г' ) } 
+      it { should have_content('#'   ) }
     end
 
     describe 'shold show data' do
