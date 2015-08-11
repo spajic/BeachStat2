@@ -1,13 +1,48 @@
-game1:
-  id: 1
+game11:
+  id: 11
   day_id: 1
   num_in_day: 1
   win_points: 15
   lose_points: 11
 
-game2:
-  id: 2
+game12:
+  id: 12
   day_id: 1
   num_in_day: 2
   win_points: 15
   lose_points: 10
+
+game21:
+  id: 21
+  day_id: 2
+  num_in_day: 1
+  win_points: 15
+  lose_points: 12
+
+game22:
+  id: 22
+  day_id: 2
+  num_in_day: 2
+  win_points: 15
+  lose_points: 12  
+
+game31:
+  id: 31
+  day_id: 3
+  num_in_day: 1
+  win_points: 15
+  lose_points: 12
+
+game32:
+  id: 32
+  day_id: 3
+  num_in_day: 2
+  win_points: 15
+  lose_points: 12
+
+game33:
+  id: 33
+  day_id: 3
+  num_in_day: 3
+  win_points: 15
+  lose_points: 12

@@ -17,3 +17,8 @@ oleg:
   id: 4
   is_legioner: false
   name: Олег
+
+ambal:
+  id: 5
+  is_legioner: false
+  name: Амбал

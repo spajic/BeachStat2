@@ -1,4 +1,14 @@
 day1:
   id: 1
   date: 13-05-2013
-  comment: Opening
+  comment: Day 1. 11111
+
+day2:
+  id: 2
+  date: 15-05-2013
+  comment: Day 2. 22222
+
+day3:
+  id: 3
+  date: 18-05-2014
+  comment: Day 3. 33333

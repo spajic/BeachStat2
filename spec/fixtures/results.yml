@@ -1,47 +1,177 @@
-result1_1:
-  id: 1
-  game_id: 1
+#День 1
+#[1, 'Спаич', 'Прас', 'Олег', 'Баранов', 15, 11],
+#[2, 'Спаич', 'Баранов', 'Олег', 'Прас', 15, 10]
+result11_1:
+  id: 111
+  game_id: 11
   player_id: 1
   win: true
 
-result1_2:
-  id: 2
-  game_id: 1
+result11_2:
+  id: 112
+  game_id: 11
   player_id: 2
   win: true
 
-result1_3:
-  id: 3
-  game_id: 1
+result11_3:
+  id: 113
+  game_id: 11
   player_id: 3
   win: false
 
-result1_4:
-  id: 4
-  game_id: 1
+result11_4:
+  id: 114
+  game_id: 11
   player_id: 4
   win: false
 
-result2_1:
-  id: 5
-  game_id: 3
+result12_1:
+  id: 121
+  game_id: 12
   player_id: 1
   win: true
 
-result2_2:
-  id: 6
-  game_id: 2
+result12_2:
+  id: 122
+  game_id: 12
   player_id: 3
   win: true
 
-result2_3:
-  id: 7
-  game_id: 2
+result12_3:
+  id: 123
+  game_id: 12
   player_id: 2
   win: false
 
-result2_4:
-  id: 8
-  game_id: 2
+result12_4:
+  id: 124
+  game_id: 12
+  player_id: 4
+  win: false
+
+#День 2:
+#[1, 'Спаич', 'Олег', 'Прас', 'Баранов', 15, 12],
+#[2, 'Спаич', 'Баранов', 'Олег', 'Прас', 15, 12]
+result21_1:
+  id: 211
+  game_id: 21
+  player_id: 1
+  win: true
+
+result21_2:
+  id: 212
+  game_id: 21
+  player_id: 4
+  win: true
+
+result21_3:
+  id: 213
+  game_id: 21
+  player_id: 2
+  win: false
+
+result21_4:
+  id: 214
+  game_id: 21
+  player_id: 3
+  win: false
+
+result22_1:
+  id: 221
+  game_id: 22
+  player_id: 1
+  win: true
+
+result22_2:
+  id: 222
+  game_id: 22
+  player_id: 3
+  win: true
+
+result22_3:
+  id: 223
+  game_id: 22
+  player_id: 4
+  win: false
+
+result22_4:
+  id: 224
+  game_id: 22
+  player_id: 2
+  win: false
+
+#День 3:
+#[1, 'Спаич', 'Прас', 'Олег', 'Баранов', 15, 12],
+#[2, 'Спаич', 'Олег', 'Баранов', 'Прас', 15, 12]
+#[3, 'Спаич', 'Прас', 'Амбал', 'Олег', 15, 12]
+result31_1:
+  id: 311
+  game_id: 31
+  player_id: 1
+  win: true
+
+result31_2:
+  id: 312
+  game_id: 31
+  player_id: 2
+  win: true
+
+result31_3:
+  id: 313
+  game_id: 31
+  player_id: 3
+  win: false
+
+result31_4:
+  id: 314
+  game_id: 31
+  player_id: 4
+  win: false
+
+result32_1:
+  id: 321
+  game_id: 32
+  player_id: 1
+  win: true
+
+result32_2:
+  id: 322
+  game_id: 32
+  player_id: 4
+  win: true
+
+result32_3:
+  id: 323
+  game_id: 32
+  player_id: 2
+  win: false
+
+result32_4:
+  id: 324
+  game_id: 32
+  player_id: 3
+  win: false
+
+result33_1:
+  id: 331
+  game_id: 33
+  player_id: 1
+  win: true
+
+result33_2:
+  id: 332
+  game_id: 33
+  player_id: 2
+  win: true
+
+result33_3:
+  id: 333
+  game_id: 33
+  player_id: 5
+  win: false
+
+result33_4:
+  id: 334
+  game_id: 33
   player_id: 4
   win: false
