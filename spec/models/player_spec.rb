@@ -32,9 +32,9 @@ describe Player do
   		@spajic = Player.first 
   		@pras   = Player.find(2)
       @spajic_s = {
-        "wins_count"=>2, 
+        "wins_count"=>7, 
         "loses_count"=>0,
-        "games_count"=>2, 
+        "games_count"=>7, 
         "wins_to_games_ratio"=>100, 
         "more_wins_man_count"=>0, 
         "more_wins_man_ratio"=>100,
@@ -43,66 +43,66 @@ describe Player do
         "place"=>1
       }
       @pras_s = {
-        "wins_count"=>1, 
-        "loses_count"=>1, 
-        "games_count"=>2, 
-        "wins_to_games_ratio"=>50, 
+        "wins_count"=>3, 
+        "loses_count"=>4, 
+        "games_count"=>7, 
+        "wins_to_games_ratio"=>43, 
         "more_wins_man_count"=>1, 
-        "more_wins_man_ratio"=>67, 
-        "rating"=>58, 
+        "more_wins_man_ratio"=>75, 
+        "rating"=>59, 
         "more_rating_man_count"=>1, 
         "place"=>2
       }
       @baranov_s = {
-        "wins_count"=>1, 
-        "loses_count"=>1, 
-        "games_count"=>2, 
-        "wins_to_games_ratio"=>50, 
-        "more_wins_man_count"=>1, 
-        "more_wins_man_ratio"=>67, 
-        "rating"=>58, 
+        "wins_count"=>2, 
+        "loses_count"=>4, 
+        "games_count"=>6, 
+        "wins_to_games_ratio"=>33, 
+        "more_wins_man_count"=>2, 
+        "more_wins_man_ratio"=>50, 
+        "rating"=>41, 
         "more_rating_man_count"=>2, 
         "place"=>3
       }
       @oleg_s = {
-        "wins_count"=>0, 
-        "loses_count"=>2, 
-        "games_count"=>2, 
-        "wins_to_games_ratio"=>0, 
-        "more_wins_man_count"=>3, 
-        "more_wins_man_ratio"=>0, 
-        "rating"=>0, 
-        "more_rating_man_count"=>3, 
+        "wins_count"=>2, 
+        "loses_count"=>5, 
+        "games_count"=>7, 
+        "wins_to_games_ratio"=>29, 
+        "more_wins_man_count"=>2, 
+        "more_wins_man_ratio"=>50, 
+        "rating"=>39, 
+        "more_rating_man_count"=>2, 
         "place"=>4
       }
     }
       	
 
     it { Player.legioners.should match_array([@pras]) } 
-    it { Player.jackpot.should eq(200) }
+    it { Player.jackpot.should eq(600) }
   	it { @spajic.name.should eq('Спаич') }
   	it { @pras  .name.should eq('Прас' ) }
 
     it { @spajic.is_legioner.should eq(false) }
     it { @pras  .is_legioner.should eq(true) }
 
-    it { @spajic.days_count.should eq(1) }
+    it { @spajic.days_count.should eq(3) }
 
-  	it { @spajic.wins_count.should eq(2) }
+  	it { @spajic.wins_count.should eq(7) }
   	it { @spajic.loses_count.should eq(0) }
-  	it { @spajic.games_count.should eq(2) } 
+  	it { @spajic.games_count.should eq(7) } 
 
   it { @spajic.wins_to_games_ratio.should eq(100) }
- 	it { @pras  .wins_to_games_ratio.should eq(50) }
+ 	it { @pras  .wins_to_games_ratio.should eq(43) }
 
  	it { @spajic.more_wins_man_count.should eq(0) }
 	it { @pras  .more_wins_man_count.should eq(1) }
  
 	it { @spajic.more_wins_man_ratio.should eq(100) }
-	it { @pras.more_wins_man_ratio.should   eq(67) }
+	it { @pras.more_wins_man_ratio.should   eq(75) }
 
 	it { @spajic.rating.should eq(100) }
-	it { @pras.rating.should eq(58) }
+	it { @pras.rating.should eq(59) }
 
 	it { @spajic.more_rating_man_count.should eq(0) }
 	it { @pras  .more_rating_man_count.should eq(1) }
