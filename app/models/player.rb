@@ -15,7 +15,7 @@ class Player < ActiveRecord::Base
 		@days ||= days.distinct.count
 	end
 	def wins_count
-		@wins ||= results.where(win: true).count
+		@wins ||= (results.where(win: true).count || 0)
 	end
 	def loses_count
 		@loses ||= results.where(win: false).count
