@@ -45,7 +45,7 @@ Players = [
 	['Якут'		, true	]
 ]
 Players.each do |p| 
-	player = Player.find_or_create_by_name(p[0])
+	player = Player.new(name: p[0])
 	player.is_legioner = p[1]
 	player.save
 end
