@@ -1,9 +1,11 @@
-BeachStat2::Application.routes.draw do
-  get "main/main"
-  get "reports/legioners"
-  #get "games/index"
+Rails.application.routes.draw do
   resources :games
   resources :players
+  root 'games#index'
+  get 'main/main' => 'main#main'
+  get 'reports/legioners' => 'reports#legioners'
+  get 'games/index' => 'games#index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
