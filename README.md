@@ -1,4 +1,5 @@
 # BeachStat2
+http://beachstat.herokuapp.com/
 
 ## История
 
